@@ -3,5 +3,5 @@
 
     <string name="hello">Hello World, TstlibActivity!</string>
     <string name="app_name">指紋辨識 SFC360</string>
-    <string name="ip">40.74.81.17:8080</string>
+    <string name="ip">40.74.81.17:8081</string>
 </resources>

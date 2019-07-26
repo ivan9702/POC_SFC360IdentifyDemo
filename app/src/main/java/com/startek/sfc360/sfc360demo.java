@@ -110,6 +110,8 @@ public class sfc360demo extends Activity {
     public static Boolean UI_HTTPS_Enable = false;
     public String UI_UserID;
     public String UI_FPID;
+    static int StatusCode=0;
+    int RecoveryColor=0;
     //////////////////////////////////////////////////////////////////
     /**
      * Called when the activity is first created.
@@ -184,7 +186,8 @@ public class sfc360demo extends Activity {
 
     private void connectreader() {
         // TODO Auto-generated method stub
-
+        if(RecoveryColor !=0 )
+            theMessage.setTextColor(RecoveryColor);
         usbIf = d.getInterface(0);
         Log.d("Device", "Interface:-" + String.valueOf(usbIf.getEndpointCount()));
         Log.d("Device", "Interface Count: " + Integer.toString(d.getInterfaceCount()));
@@ -254,6 +257,9 @@ public class sfc360demo extends Activity {
         sharedata = getSharedPreferences("IP_ADDR", MODE_PRIVATE);
         editor = sharedata.edit();
         ip=sharedata.getString("ip","0");
+        if(RecoveryColor !=0 )
+            theMessage.setTextColor(RecoveryColor);
+
         if(ip.equals("0"))
         {
             LayoutInflater layoutInflater = LayoutInflater.from(sfc360demo.this);
@@ -402,6 +408,8 @@ public class sfc360demo extends Activity {
             @Override
 
             public void onClick(View v) {
+                if(RecoveryColor !=0 )
+                    theMessage.setTextColor(RecoveryColor);
 
                 Log.v("Device", "Marcus: Click");
                 try {
@@ -600,7 +608,7 @@ public class sfc360demo extends Activity {
                                     break;
                                 } else if (i == 5) {
                                     Message msg4 = new Message();
-                                    msg4.what = PublicData.TEXTVIEW_FAILURE;
+                                    msg4.what = PublicData.TEXTVIEW_TIMEOUT_CAPTURE_FAIL;
                                     m_eventHandler.sendMessage(msg4);
                                 }
                                 //showPic();
@@ -672,6 +680,7 @@ public class sfc360demo extends Activity {
                         editor.commit();
                         Log.d("Main Dialog", "IP: "+sharedata.getString("ip","0"));
                         Log.d("Main Dialog", "PORT: "+sharedata.getString("port","0"));
+                        dialog.dismiss();
                     }
                 })
                 .setNegativeButton("Cancel",
@@ -685,6 +694,20 @@ public class sfc360demo extends Activity {
         // create an alert dialog
         AlertDialog alert = alertDialogBuilder.create();
         alert.show();
+    }
+
+    public void AlertDialog(String msg) {
+        new AlertDialog.Builder(sfc360demo.this)
+                .setTitle("Failure")
+                .setMessage(msg)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+
+                .show();
     }
 
     class showPic extends AsyncTask<String, Void, String> {
@@ -740,9 +763,11 @@ public class sfc360demo extends Activity {
                     theMessage.postInvalidate();
                     break;
                 case PublicData.TEXTVIEW_FAILURE:
-                    theMessage.setText("Failure..."+UI_message);
+                    theMessage.setText(UI_message);
                     theMessage.postInvalidate();
+                    AlertDialog(UI_message);
                     buttonEnroll.setEnabled(true);
+                    buttonIdentify.setEnabled(true);
                     break;
                 case PublicData.TEXTVIEW_CAPTURE_PLEASE_PRESS:
                     theMessage.setText("Capture: Press your finger");
@@ -842,9 +867,9 @@ public class sfc360demo extends Activity {
 
 
        UI_message = ParseJsonString(results);
-        Log.d("IVAN", "Srv_Identify return string " + results+ "score"+ UI_Score);
+       Log.d("IVAN", "Srv_Identify return string " + results+ "score"+ UI_Score);
 
-        if(UI_Code>40000){
+        if(UI_Code != 200){
             Message msg1 = new Message();
             msg1.what = PublicData.TEXTVIEW_FAILURE;
             m_eventHandler.sendMessage(msg1);
@@ -896,7 +921,7 @@ public class sfc360demo extends Activity {
         Boolean https_en = UI_HTTPS_Enable;
         //String ip = UI_Srv_IP;
         //String port = UI_Srv_Port;
-        String route = "/search/minutiae";
+        String route = "/identify";
         Boolean ignore_https_ca = true;
 
         Log.d("IVAN", "Srv_Identify  Json string: " + json_string);
@@ -978,7 +1003,12 @@ public class sfc360demo extends Activity {
                 wr.writeBytes (json_string);
                 wr.flush ();
                 wr.close ();
-                is = connection.getInputStream();
+               // is = connection.getInputStream();
+                is = connection.getErrorStream();
+                if (is == null) {
+                    is = connection.getInputStream();
+                }
+                StatusCode = connection.getResponseCode();
             }
             else
             {
@@ -998,8 +1028,14 @@ public class sfc360demo extends Activity {
                 wr.writeBytes (json_string);
                 wr.flush ();
                 wr.close ();
-                is = connection.getInputStream();
+               // is = connection.getInputStream();
+                is = connection.getErrorStream();
+                if (is == null) {
+                    is = connection.getInputStream();
+                }
+                StatusCode = connection.getResponseCode();
             }
+
             /*
             wr.writeBytes (json_string);
             wr.flush ();
@@ -1036,16 +1072,26 @@ public class sfc360demo extends Activity {
 
             }
         }
-        Log.d("IVAN", "res_str " + ret_str);
+
+        Log.d("IVAN", "res_str " + ret_str+ "Response Code:" +StatusCode );
         return ret_str;
     }
 
     public String ParseJsonString (String message) throws JSONException {
 
 
+        if(StatusCode != 200)
+        {
+            RecoveryColor = theMessage.getCurrentTextColor();
+           // theMessage.setText(message.toString());
+            theMessage.setTextColor(Color.rgb(200,0,0));
+            UI_Code=StatusCode;
+
+            return message;
+        }
         Log.d("IVAN", "RETURE:"+message);
-        String msg = "TEST";
-       /* JSONObject json = new JSONObject(message);
+
+        JSONObject json = new JSONObject(message);
         int code = json.getInt("code");
         String userID;
         String fpIndex;
@@ -1089,7 +1135,7 @@ public class sfc360demo extends Activity {
             Message msg4 = new Message();
             msg4.what = PublicData.TEXTVIEW_FAILURE;
             m_eventHandler.sendMessage(msg4);
-        }*/
+        }
         return msg;
     }
 }
