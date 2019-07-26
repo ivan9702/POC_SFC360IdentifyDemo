@@ -1,0 +1,92 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:2:1-31:12
+MERGED from [com.orhanobut:logger:1.15] C:\Users\ivan.STARTEK-ENG\.gradle\caches\transforms-2\files-2.1\b5732f1e413aa17c9b10cbaa3f55c4cc\AndroidManifest.xml:2:1-8:12
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:2:1-31:12
+	package
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:2:11-39
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:5:11-36
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:3:11-69
+	android:versionCode
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:4:11-34
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+uses-feature#android.hardware.usb.host
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:7:5-61
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:7:19-59
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.INTERNET
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:9:5-66
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:10:22-76
+application
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:12:5-29:19
+	android:label
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:14:9-41
+	android:icon
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:13:9-45
+activity#com.startek.sfc360.sfc360demo
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:15:9-28:20
+	android:screenOrientation
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:19:13-49
+	android:label
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:18:13-45
+	android:configChanges
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:17:13-74
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:16:13-39
+intent-filter#action:name:android.hardware.usb.action.USB_DEVICE_ATTACHED+action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:20:13-24:29
+action#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:21:17-89
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:21:25-87
+action#android.intent.action.MAIN
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:22:17-68
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:23:17-76
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:23:27-74
+meta-data#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:25:13-27:56
+	android:resource
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:27:17-54
+	android:name
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml:26:17-79
+uses-sdk
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+MERGED from [com.orhanobut:logger:1.15] C:\Users\ivan.STARTEK-ENG\.gradle\caches\transforms-2\files-2.1\b5732f1e413aa17c9b10cbaa3f55c4cc\AndroidManifest.xml:6:5-43
+MERGED from [com.orhanobut:logger:1.15] C:\Users\ivan.STARTEK-ENG\.gradle\caches\transforms-2\files-2.1\b5732f1e413aa17c9b10cbaa3f55c4cc\AndroidManifest.xml:6:5-43
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+		ADDED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Umedy\Andorid\POC_SFC360IdentifyDemo-Android7_20190723\app\src\main\AndroidManifest.xml

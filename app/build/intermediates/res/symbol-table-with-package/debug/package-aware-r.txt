@@ -1,0 +1,18 @@
+com.startek.sfc360
+drawable ic_launcher
+id IdentifyB
+id apk_Ver
+id connectB
+id discB
+id edittext
+id enrollB
+id message
+id setting_image
+id test_image
+id textView
+layout main
+layout text_inpu_password
+string app_name
+string hello
+string ip
+xml device_filter

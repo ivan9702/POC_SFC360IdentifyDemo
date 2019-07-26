@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\Umedy\\Andorid\\POC_SFC360IdentifyDemo-Android7_20190723\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "E:\\Umedy\\Andorid\\POC_SFC360IdentifyDemo-Android7_20190723\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,3,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "123,59,173",
+                        "endColumns": "48,62,47",
+                        "endOffsets": "167,117,216"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,104,167",
+                        "endColumns": "48,62,47",
+                        "endOffsets": "99,162,210"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+#Fri Jul 26 15:50:32 CST 2019
+base.0=E\:\\Umedy\\Andorid\\POC_SFC360IdentifyDemo-Android7_20190723\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+path.0=classes.dex
+renamed.0=classes.dex
